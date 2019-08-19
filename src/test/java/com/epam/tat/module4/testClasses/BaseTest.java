@@ -9,7 +9,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 
-
 public class BaseTest {
     private static Calculator calculator;
 
