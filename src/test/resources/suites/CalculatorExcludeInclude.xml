@@ -4,17 +4,16 @@
     <test name="ExcludeInclude">
         <groups>
             <run>
-                <include name="math">
-                    <classes>
-                        <class name="com.epam.tat.module4.testClasses.math.CalculatorSumTest"/>
-                        <class name="com.epam.tat.module4.testClasses.math.CalculatorSubTest">
-                            <methods>
-                                <exclude name="testSubDouble"/>
-                            </methods>
-                        </class>
-                    </classes>
-                </include>
+                <include name="math"/>
             </run>
         </groups>
+        <classes>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSumTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSubTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorDivTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorMultTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorPowTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSqrtTest"/>
+        </classes>
     </test>
 </suite>

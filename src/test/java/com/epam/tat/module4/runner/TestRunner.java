@@ -3,7 +3,6 @@ package com.epam.tat.module4.runner;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public class TestRunner {
         TestNG tng = new TestNG();
         XmlSuite suite = new XmlSuite();
         suite.setName("TmpSuite");
-        List<String> files = new ArrayList<String>(new ArrayList<String>() {{
+        final List<String> files = new ArrayList<String>(new ArrayList<String>() {{
             add("./src/test/resources/suites/CalculatorOneByOne.xml");
         }});
         suite.setSuiteFiles(files);

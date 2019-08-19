@@ -11,12 +11,9 @@ import org.testng.annotations.AfterMethod;
 
 
 public class BaseTest {
-    private Calculator calculator;
+    private static Calculator calculator;
 
     public Calculator getCalculator() {
-        if (calculator == null) {
-            calculator = new Calculator();
-        }
         return calculator;
     }
 
@@ -24,7 +21,7 @@ public class BaseTest {
         this.calculator = calculator;
     }
 
-    @BeforeSuite
+    @BeforeSuite(groups = "math")
     public void createInstance() {
         System.out.println("Created instance of Calculator");
         calculator = new Calculator();

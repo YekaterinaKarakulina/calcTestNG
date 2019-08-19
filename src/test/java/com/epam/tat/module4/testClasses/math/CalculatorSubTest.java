@@ -7,7 +7,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CalculatorSubTest extends BaseTest {
-    @Test(groups = "math", dataProviderClass = DataProvider.class, dataProvider = "longTwoValues")
+    @Test(dataProviderClass = DataProvider.class, dataProvider = "longTwoValues")
     @Parameters({"a", "b"})
     public void testSubLong(long a, long b) {
         long result = a - b;
