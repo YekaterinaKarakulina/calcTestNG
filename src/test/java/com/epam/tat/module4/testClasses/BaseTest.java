@@ -21,7 +21,7 @@ public class BaseTest {
         this.calculator = calculator;
     }
 
-    @BeforeSuite(groups = "math")
+    @BeforeSuite(alwaysRun = true)
     public void createInstance() {
         System.out.println("Created instance of Calculator");
         calculator = new Calculator();
