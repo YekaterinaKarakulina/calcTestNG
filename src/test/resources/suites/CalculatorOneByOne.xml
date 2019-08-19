@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Calculator" verbose="1" parallel="false">
+    <test name="Math">
+        <classes>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSumTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSubTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorMultTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorDivTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorPowTest"/>
+            <class name="com.epam.tat.module4.testClasses.math.CalculatorSqrtTest"/>
+        </classes>
+    </test>
+    <test name="Trigonometric">
+        <classes>
+            <class name="com.epam.tat.module4.testClasses.trigonometric.CalculatorSinTest"/>
+            <class name="com.epam.tat.module4.testClasses.trigonometric.CalculatorCosTest"/>
+            <class name="com.epam.tat.module4.testClasses.trigonometric.CalculatorTgTest"/>
+            <class name="com.epam.tat.module4.testClasses.trigonometric.CalculatorCtgTest"/>
+        </classes>
+    </test>
+    <test name="boolean">
+        <classes>
+            <class name="com.epam.tat.module4.testClasses.booleanfunctions.CalculatorIsPositiveTest"/>
+            <class name="com.epam.tat.module4.testClasses.booleanfunctions.CalculatorIsNegativeTest"/>
+        </classes>
+    </test>
+</suite>
