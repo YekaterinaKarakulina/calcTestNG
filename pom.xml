@@ -15,22 +15,28 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <outputDirectory>${basedir}</outputDirectory>
+                    <finalName>calculator</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
                     <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
+                        <manifet>
                             <mainClass>com.epam.tat.module4.runner.TestRunner</mainClass>
-                        </manifest>
-                        <manifestEntries>
-                            <Class-Path>.</Class-Path>
-                        </manifestEntries>
+                        </manifet>
                     </archive>
-                    <finalName>CalculatorTestNG.jar</finalName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
