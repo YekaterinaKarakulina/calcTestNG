@@ -19,24 +19,26 @@
                 <version>3.3</version>
             </plugin>
             <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <outputDirectory>${basedir}</outputDirectory>
-                    <finalName>calculator</finalName>
-                    <appendAssemblyId>false</appendAssemblyId>
+                    <classesDirectory>src/test/java</classesDirectory>
                     <archive>
-                        <manifet>
+                        <manifest>
                             <mainClass>com.epam.tat.module4.runner.TestRunner</mainClass>
-                        </manifet>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
